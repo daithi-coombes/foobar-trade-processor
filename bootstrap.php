@@ -7,6 +7,8 @@
  */
 namespace Foobar;
 
+define('FOOBAR_DIR', dirname(__FILE__));
+
 /**
  * Autoload function.
  * 

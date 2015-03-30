@@ -14,9 +14,11 @@ class Router
     /** @var string  The action method to be called. */
     protected $_action = 'index';
     /** @var string The controller class to be called. */
-    protected $_controller = 'Index';
+    protected $_controller = 'Default';
     /** @var string The module name. */
     protected $_module;
+    /** @var array Default null. Request files data. */
+    protected $_requestFiles;
     /** @var array Default null. Request Get data. */
     protected $_requestGet;
     /** @var array Default null. Request Post data. */
@@ -95,6 +97,17 @@ class Router
     }
 
     /**
+     * Setter for the request $_FILES array.
+     * @return Router Returns self for chaining.
+     */
+    public function parseFiles($data=null)
+    {
+        $this->_requestFiles = $data;
+
+        return $this;
+    }
+
+    /**
      * Setter for the request get.
      * @return Router Returns self for chaining.
      */
@@ -114,11 +127,11 @@ class Router
 
         $this->_requestPost = $data;
 
-        if (@$data['controller'])
+        if (isset($data['controller']))
             $this->_controller = $data['controller'];
-        if (@$data['action'])
+        if (isset($data['action']))
             $this->_action = $data['action'];
-        if (@$data['module'])
+        if (isset($data['module']))
             $this->_module = $data['module'];
 
         return $this;

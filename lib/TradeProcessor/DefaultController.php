@@ -2,7 +2,7 @@
 namespace Foobar\TradeProcessor;
 use Foobar\Controller;
 
-class IndexController extends Controller
+class DefaultController extends Controller
 {
 
     public function index()

@@ -38,6 +38,14 @@ class Controller
     }
 
     /**
+     * Default action method.
+     */
+    public function index()
+    {
+        ;
+    }
+
+    /**
      * Gets action method from router and calls it.
      * @return \Foobar\Controller Returns self for chaining.
      */

@@ -14,12 +14,13 @@ use Foobar\Router;
 require_once('bootstrap.php');
 
 //set default module
-if (!@$_POST['module'])
+if (isset($_POST['module']))
     $_POST['module'] = 'TradeProcessor';
 
 //route request
 $route = Router::getInstance()
 	->parseGet(null)
+	->parseFiles(null)
 	->parsePost($_POST);    //only parse post requests
 
 
