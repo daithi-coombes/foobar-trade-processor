@@ -12,8 +12,10 @@ use Foobar;
 class View
 {
 
-    /** @var string The full path to the package root directory */
+    /** @var string The full path to the package root directory. */
     protected $_tplDirectory;
+    /** @var \Foobar\Controller The relevant controller. */
+    protected $controller;
     
     /**
      * Constructor.
@@ -22,6 +24,18 @@ class View
     {
 
         $this->_tplDirectory = FOOBAR_DIR . '/view';
+    }
+
+    /**
+     * @covers \Foobar\View::setController()
+     */
+    public static function getView(Controller $controller)
+    {
+        
+        $obj = new View();
+        $obj->setController($controller);
+
+        return $obj;
     }
 
     /**
@@ -67,5 +81,16 @@ class View
     {
 
         return $html;
+    }
+
+    /**
+     * Set the controller for this view.
+     * @return View Returns self for chaining.
+     */
+    public function setController(Controller $controller)
+    {
+
+        $this->controller = $controller;
+        return $this;
     }
 }
