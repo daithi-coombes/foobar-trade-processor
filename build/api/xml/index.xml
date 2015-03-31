@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="/vagrant/project/foobar-trade-processor/lib">
+  <namespace name="Foobar">
+    <class name="Controller" src="Controller.php" description="Main controller." xml="classes/Foobar_Controller.xml"/>
+    <class name="View" src="View.php" description="Main View class." xml="classes/Foobar_View.xml"/>
+    <class name="Router" src="Router.php" description="Router Singleton Class." xml="classes/Foobar_Router.xml"/>
+  </namespace>
+  <namespace name="Foobar\TradeProcessor">
+    <class name="DefaultController" src="TradeProcessor/DefaultController.php" description="Default controller" xml="classes/Foobar_TradeProcessor_DefaultController.xml"/>
+  </namespace>
+</index>

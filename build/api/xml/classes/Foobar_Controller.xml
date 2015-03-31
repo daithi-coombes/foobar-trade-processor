@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Foobar\Controller" namespace="Foobar" name="Controller" abstract="false" final="false" start="17" end="99">
+  <file path="/vagrant/project/foobar-trade-processor/build/../lib" file="Controller.php" realpath="/vagrant/project/foobar-trade-processor/lib/Controller.php" size="2033" time="2015-03-30T22:17:14-04:00" unixtime="1427768234" sha1="8b530570656934b284103d9a507bc61d998760ff" relative="Controller.php"/>
+  <docblock>
+    <description compact="Main controller.">Acts as the default controller and also as a parent class for modules
+contollers.</description>
+  </docblock>
+  <member name="_route" type="{unknown}" visibility="protected" line="21">
+    <docblock>
+      <var description="The route instance." type="object">
+        <type full="\Foobar\Route" namespace="\Foobar" name="Route"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="_data" type="array" visibility="protected" line="23">
+    <docblock>
+      <var description="An array of data to pass to the View." type="array"/>
+    </docblock>
+  </member>
+  <method name="factory" start="33" end="53" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Factory method.">Get the controller object based on the Route instance.</description>
+      <param description="The route instance." type="object" variable="$route">
+        <type full="Foobar\Route" namespace="Foobar" name="Route"/>
+      </param>
+      <return type="object">
+        <type full="Foobar\Controller" namespace="Foobar" name="Controller"/>
+      </return>
+    </docblock>
+    <parameter name="route" byreference="false" type="object">
+      <type full="Foobar\Router" namespace="Foobar" name="Router"/>
+    </parameter>
+    <inline>
+      <comment value="get module" line="36"/>
+      <comment value="construct and return" line="48"/>
+    </inline>
+  </method>
+  <method name="index" start="58" end="62" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Default action method."/>
+    </docblock>
+  </method>
+  <method name="doAction" start="68" end="76" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Gets action method from router and calls it."/>
+      <return description="Returns self for chaining." type="object">
+        <type full="\Foobar\Controller" namespace="\Foobar" name="Controller"/>
+      </return>
+    </docblock>
+    <inline>
+      <comment value="call action method" line="71"/>
+    </inline>
+  </method>
+  <method name="getResult" start="83" end="87" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get the parsed result."/>
+      <uses value="self::result"/>
+      <return type="object">
+        <type full="Foobar\array." namespace="Foobar" name="array."/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setRoute" start="93" end="98" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Set the Route instance."/>
+      <return description="Returns self for chaining." type="object">
+        <type full="Foobar\Controller" namespace="Foobar" name="Controller"/>
+      </return>
+    </docblock>
+    <parameter name="route" byreference="false" type="object">
+      <type full="Foobar\Router" namespace="Foobar" name="Router"/>
+    </parameter>
+  </method>
+  <extender full="Foobar\TradeProcessor\DefaultController" namespace="Foobar\TradeProcessor" name="DefaultController"/>
+</class>
