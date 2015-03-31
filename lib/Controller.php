@@ -20,7 +20,9 @@ class Controller
     /** @var \Foobar\Route The route instance. */
     protected $_route;
     /** @var array An array of data to pass to the View. */
-    protected $_data = array();
+    protected $_data = array(
+        'title' => 'Foobar'
+    );
 
     /**
      * Factory method.
@@ -55,7 +57,8 @@ class Controller
      */
     public function index()
     {
-        ;
+        
+        return $this->_data;
     }
 
     /**

@@ -38,49 +38,18 @@ class View
         return $obj;
     }
 
-    /**
-     * Get footer html.
-     * @return string
-     */
-    public function getFooter()
+    public function render()
     {
 
-        $html = file_get_contents($this->_tplDirectory . '/footer.tpl');
+        foreach (array(
+            $this->_tplDirectory.'/head.tpl',
+            $this->_tplDirectory.'/header.tpl',
+            $this->_tplDirectory.'/body.tpl',
+            $this->_tplDirectory.'/footer.tpl'
+        ) as $tpl) {
 
-        return $this->render($html);
-    }
-
-    /**
-     * Get head html.
-     * @return string
-     */
-    public function getHead()
-    {
-
-        $html = file_get_contents($this->_tplDirectory . '/head.tpl');
-
-        return $this->render($html);
-    }
-
-    /**
-     * Get header html.
-     * @return string
-     */
-    public function getHeader()
-    {
-
-        $html = file_get_contents($this->_tplDirectory . '/header.tpl');
-
-        return $this->render($html);
-    }
-
-    /**
-     * @todo maybe should return DomDocument?
-     */
-    public function render($html)
-    {
-
-        return $html;
+            $this->getTpl($tpl);
+        }
     }
 
     /**
@@ -92,5 +61,16 @@ class View
 
         $this->controller = $controller;
         return $this;
+    }
+
+    /**
+     * Load a tpl file.
+     * @param string $path The full path and filename of the tpl file.
+     */
+    private function getTpl($path)
+    {
+
+        $data = $this->controller->getResult();
+        require_once($path);
     }
 }

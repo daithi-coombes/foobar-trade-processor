@@ -8,6 +8,7 @@
 namespace Foobar;
 
 define('FOOBAR_DIR', dirname(__FILE__));
+define('FOOBAR_URL', '/foobar-trade-processor');
 
 /**
  * Autoload function.

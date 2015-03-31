@@ -35,42 +35,11 @@ class ViewTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @todo assertTag() is deprecated, replace it
+     * @todo write this unit test.
+     * @covers \Foobar\View::getTpl()
      */
-    public function testRenderHead()
+    public function testRender()
     {
-
-        global $view;
-
-        $actual = $view->getHead();
-        $matcher = array(
-            'tag'       => 'title',
-            'ancestor'  => array('tag', 'DOCTYPE'),
-            'parent'    => array('tag', 'head')
-        );
-
-        //$this->assertTag($matcher, $actual);
-    }
-
-    /**
-     * @todo write unit tests
-     */
-    public function testRenderHeader()
-    {
-
-        global $view;
-
-        $view->getHeader();
-    }
-
-    /**
-     * @todo write unit tests
-     */
-    public function testRenderFooter()
-    {
-
-        global $view;
-
-        $view->getFooter();
-    }
+        ;
+    } 
 }
