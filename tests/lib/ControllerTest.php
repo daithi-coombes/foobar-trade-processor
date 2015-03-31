@@ -27,6 +27,19 @@ class ControllerTest extends \PHPUnit_Framework_TestCase
 		$this->assertInstanceOf('\Foobar\Controller', $actual);
 	}
 
+	public function testDefaultController()
+	{
+
+		$mockRoute = \Foobar\Router::getInstance();
+		$controller = \Foobar\Controller::factory($mockRoute);
+
+		//test by classname, not instance, to ensure default Controller is returned.
+		$actual = get_class($controller);
+		$expected = 'Foobar\\Controller';
+
+		$this->assertEquals($expected, $actual);
+	}
+
 	/**
 	 * @covers \Foobar\Controller::getResult()
 	 */

@@ -8,6 +8,12 @@
 namespace Foobar;
 use Foobar;
 
+/**
+ * Main controller.
+ * 
+ * Acts as the default controller and also as a parent class for modules
+ * contollers.
+ */
 class Controller
 {
 
@@ -25,12 +31,19 @@ class Controller
     public static function factory(Router $route)
     {
         
+        //get module
         $module = $route->getModule();
-        ($module) ?
-            $namespace = '\Foobar\\' . $route->getModule() . '\\':
-            $namespace = '\Foobar\\';
-        $class = $namespace . $route->getController() . 'Controller';
+        if ($module) {
+            $namespace = '\Foobar\\' . $route->getModule() . '\\';
+            $class = $namespace . $route->getController() . 'Controller';
+        }
 
+        //default module is this class
+        else {
+            $class = '\Foobar\\Controller';
+        }
+
+        //construct and return
         $obj = new $class();
         $obj->setRoute($route);
 
