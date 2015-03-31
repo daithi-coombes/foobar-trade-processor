@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<source xmlns="http://xml.phpdox.net/src">
+  <dir name="/vagrant/project/foobar-trade-processor/lib">
+    <file name="Controller.php" size="2033" time="2015-03-30T22:17:14-04:00" unixtime="1427768234" sha1="8b530570656934b284103d9a507bc61d998760ff" xml="tokens/Controller.php.xml"/>
+    <dir name="TradeProcessor">
+      <file name="DefaultController.php" size="422" time="2015-03-30T22:17:14-04:00" unixtime="1427768234" sha1="51dd36728ca37e01cdcd9e19f840ba0167ed3c8c" xml="tokens/TradeProcessor/DefaultController.php.xml"/>
+    </dir>
+    <file name="View.php" size="1507" time="2015-03-30T22:17:14-04:00" unixtime="1427768234" sha1="bf2943aca9895e75fd71b4e36c357aed6363c903" xml="tokens/View.php.xml"/>
+    <file name="Router.php" size="3145" time="2015-03-30T22:17:14-04:00" unixtime="1427768234" sha1="b2fa534168a65fe947f2788db2591b4e6cd2f190" xml="tokens/Router.php.xml"/>
+  </dir>
+</source>

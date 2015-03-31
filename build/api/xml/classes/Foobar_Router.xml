@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Foobar\Router" namespace="Foobar" name="Router" abstract="false" final="false" start="11" end="163">
+  <file path="/vagrant/project/foobar-trade-processor/build/../lib" file="Router.php" realpath="/vagrant/project/foobar-trade-processor/lib/Router.php" size="3145" time="2015-03-30T22:17:14-04:00" unixtime="1427768234" sha1="b2fa534168a65fe947f2788db2591b4e6cd2f190" relative="Router.php"/>
+  <docblock>
+    <description compact="Router Singleton Class."/>
+  </docblock>
+  <member name="_action" type="string" default="'index'" visibility="protected" line="15">
+    <docblock>
+      <var description="The action method to be called." type="string"/>
+    </docblock>
+  </member>
+  <member name="_controller" type="string" default="'Default'" visibility="protected" line="17">
+    <docblock>
+      <var description="The controller class to be called." type="string"/>
+    </docblock>
+  </member>
+  <member name="_module" type="{unknown}" visibility="protected" line="19">
+    <docblock>
+      <var description="The module name." type="string"/>
+    </docblock>
+  </member>
+  <member name="_requestFiles" type="{unknown}" visibility="protected" line="21">
+    <docblock>
+      <var description="Default null. Request files data." type="array"/>
+    </docblock>
+  </member>
+  <member name="_requestGet" type="{unknown}" visibility="protected" line="23">
+    <docblock>
+      <var description="Default null. Request Get data." type="array"/>
+    </docblock>
+  </member>
+  <member name="_requestPost" type="{unknown}" visibility="protected" line="25">
+    <docblock>
+      <var description="Default null. Request Post data." type="array"/>
+    </docblock>
+  </member>
+  <member name="testing" type="{unknown}" default="false" visibility="public" line="28">
+    <docblock>
+      <var description="Whether running in unit tests or not." type="boolean"/>
+    </docblock>
+  </member>
+  <method name="getInstance" start="34" end="47" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get Router singleton."/>
+      <return description="Router" type="object">
+        <type full="Foobar\Singleton" namespace="Foobar" name="Singleton"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="getAction" start="53" end="57" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get the action method."/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="getController" start="63" end="67" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get the controller class name."/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="getModule" start="73" end="77" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get the module name."/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="getRequestGet" start="83" end="87" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get get request"/>
+      <return description="Returns null if no post data." type="array"/>
+    </docblock>
+  </method>
+  <method name="getRequestPost" start="93" end="97" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get post request"/>
+      <return description="Returns null if no post data." type="array"/>
+    </docblock>
+  </method>
+  <method name="parseFiles" start="103" end="108" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Setter for the request $_FILES array."/>
+      <return description="Returns self for chaining." type="object">
+        <type full="Foobar\Router" namespace="Foobar" name="Router"/>
+      </return>
+    </docblock>
+    <parameter name="data" byreference="false" type="{unknown}" default="null"/>
+  </method>
+  <method name="parseGet" start="114" end="119" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Setter for the request get."/>
+      <return description="Returns self for chaining." type="object">
+        <type full="Foobar\Router" namespace="Foobar" name="Router"/>
+      </return>
+    </docblock>
+    <parameter name="data" byreference="false" type="{unknown}" default="null"/>
+  </method>
+  <method name="parsePost" start="125" end="138" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Setter for the request post."/>
+      <return description="Returns self for chaining." type="object">
+        <type full="Foobar\Router" namespace="Foobar" name="Router"/>
+      </return>
+    </docblock>
+    <parameter name="data" byreference="false" type="{unknown}" default="null"/>
+  </method>
+  <constructor name="__construct" start="143" end="146" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Prevent class creation with `new` keyword"/>
+    </docblock>
+  </constructor>
+  <method name="__clone" start="151" end="154" abstract="false" final="false" static="false" visibility="private">
+    <docblock>
+      <description compact="Prevent cloning of instance"/>
+    </docblock>
+  </method>
+  <method name="__wake" start="159" end="162" abstract="false" final="false" static="false" visibility="private">
+    <docblock>
+      <description compact="Prevent unserializing of instance"/>
+    </docblock>
+  </method>
+</class>
